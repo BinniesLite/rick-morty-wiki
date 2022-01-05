@@ -29,8 +29,6 @@ const CardDetail = () => {
             <img className='rounded mx-auto d-block'  src={fetchData.image} alt="" />
             <button type="button" className="btn btn-primary btn-lg btn-block px-10 mt-2">{fetchData.status}</button>
             <p className='fw-bold'>Gender <span className=''>{fetchData.gender}</span></p>
-
-        <p>Origin: {fetchData.origin.name}</p>
         <p>Species:  <span>{fetchData.species }</span></p>
         
         </div>
