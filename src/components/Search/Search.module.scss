@@ -1,0 +1,17 @@
+$transition: all linear 0.3s;
+
+.input {
+    width: 40%;
+    border-radius: 8px;
+    border: 2px solid blue; 
+    padding: 10px;
+    transition: $transition;
+    &:focus{
+        outline: none;
+    }
+}
+
+.input:hover {
+    border-color: red;
+    box-shadow: 1px 3px 9px rgba($color: black, $alpha: 0.25);
+}
