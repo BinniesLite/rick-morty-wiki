@@ -16,9 +16,10 @@ const App = () => {
       <Nav />
 
       <Routes>
-
-      <Route path="/:id" element={<CardDetail />}></Route>
+        
+      <Route path="/rick-morty-wiki" element={<Character />}></Route>
       <Route path="/" element={<Character />}></Route>
+      <Route path="/:id" element={<CardDetail />}></Route>
         <Route path="/episode" element={<Episode />}></Route>
         <Route path="/episode/:id" element={<CardDetail />}></Route>
         <Route path="/location" element={<Location />}></Route>

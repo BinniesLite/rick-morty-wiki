@@ -6,7 +6,7 @@ const Episode = () => {
   // FETCH DATA
   const [fetchData, setFetchData] = useState([]);
   const [results, setResults] = useState([]); 
-  const [info, setInfo] = useState([]);
+
   // ID
   const [id, setId] = useState(1);
   
@@ -15,10 +15,6 @@ const Episode = () => {
   const api = `https://rickandmortyapi.com/api/episode/${id}`;
   // Decomposition
   const { air_date, name } = fetchData;
-
-  const changeEpisodeHandler = (item) => {
-    console.log(item);
-  }
 
 
   useEffect(() => {
@@ -53,12 +49,12 @@ const Episode = () => {
           </h5>
         </div>
         <div className="row">
-          <div className="col-3">
+          <div className="col-lg-3 col-12 mb-4">
             <h4 className="text-center">Pick Episodes</h4>
             <InputGroup setId={setId} total={51} ></InputGroup>
           </div>
 
-          <div className="col-8">
+          <div className="col-lg-8 col-12 ">
             <div className="row">
               <Card page="/episode/" results={results} />
             </div>

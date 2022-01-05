@@ -2,7 +2,7 @@ import React from 'react'
 import classes from "./Card.module.scss";
 import { Link } from 'react-router-dom';
 
-
+// * Make sure to make the data receive from the Pages are the same
 export const Card = ({results , page}) => {
     
 
@@ -26,8 +26,8 @@ export const Card = ({results , page}) => {
             }
             
 
-            return ( <Link to={`${page}${id}`} key={id} className="col-4 mb-4 text-black position-relative text-decoration-none">
-                <div className={classes.cards}>
+            return ( <Link to={`${page}${id}`} key={id} className="col-lg-4 col-md-6 col-12 mb-4 text-black position-relative text-decoration-none">
+                <div className={` ${classes.cards} d-flex justtify-content-center flex-column`}>
                     <img src={image} alt="" srcset="" className={`img-fluid ${classes.img}`} />
                     <div className={classes.content}>
                         <div className='fs-5 fw-bold mb-3'>{name}</div>

@@ -19,7 +19,9 @@ const Character = () => {
   // FETCH DATA
   const [fetchData, setFetchData] = useState([]); 
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${enteredSearch}&gender=${filterCtx.gender}&status=${filterCtx.status}`;
+  console.log(filterCtx.species);  
+
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${enteredSearch}&gender=${filterCtx.gender}&status=${filterCtx.status}&species=${filterCtx.species}`;
   let { info, results } = fetchData;
 
   useEffect(() => {
@@ -41,8 +43,7 @@ const Character = () => {
        
             <Filter></Filter>
      
-          <div className="col-8">
-        
+          <div className="col-lg-8 col-12">
               <Card page="/" results={results} />
           </div>
         </div>

@@ -3,7 +3,7 @@ import classes from "./Search.module.scss";
 
 const Search = ({ setEnteredSearch, setPageNumber }) => {
   return (
-    <form className="d-flex justify-content-center mb-4 gap-4">
+    <form className="d-flex flex-sm-row flex-column justify-content-center align-items-center mb-4 gap-4">
       <input
         onChange={(e) => {
             setPageNumber(1);

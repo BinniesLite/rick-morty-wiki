@@ -19,25 +19,33 @@ const filterReducer = (state, action) => {
     if (action.type === "GENDER") {
         if (action.item === "MALE") {
             return {
+
                 gender: "male", 
+                species: state.species,
                 status: state.status
             };
         }
         else if (action.item === "FEMALE") {
             return {
                 gender: "female",
+                
+                species: state.species,
                 status: state.status
             };
         }
         else if (action.item === "GENDERLESS") {
             return {
                 gender: "genderless",
+                
+                species: state.species,
                 status: state.status
             };
         }
         else {
             return {
                 gender: "unknown",
+                
+                species: state.species,
                 status: state.status
             };
         }
@@ -62,6 +70,16 @@ const filterReducer = (state, action) => {
                 status: "unknown"
             };
         }
+    }
+
+    // SPECIES REDUCE
+    if (action.type === "SPECIES") {
+        return {
+            ...state,
+            species: action.item
+
+        }
+
     }
     
 };
@@ -90,14 +108,18 @@ const FilterProvider = (props) => {
     }
 
     // Species
+    const speciesFilterHandler = (item) => {
+        dispatchFilterAction({type: "SPECIES", item: item})
+    }
 
     const filterCtx = {
         gender: filterState.gender,
         status: filterState.status,
-        species: "",
+        species: filterState.species,
         clearFilter: clearFilterHandler,
         statusFilter: statusFilterHandler,
-        genderFilter: genderFilterHandler
+        genderFilter: genderFilterHandler,
+        speciesFilter: speciesFilterHandler
     }
 
     return (
