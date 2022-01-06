@@ -39,8 +39,8 @@ const Pagination = ({ info, setPageNumber, pageNumber }) => {
       nextLabel="Next"
       previousLabel="Prev" 
       previousClassName="btn btn-outline-primary text-decoration-none prev"
-      nextClassName="btn btn-primary next"
-      pageClassName="page-item"
+      nextClassName="btn next btn-outline-primary text-decoration-none"
+      pageClassName=" page-item"
       pageLinkClassName="page-link"
       onPageChange={(data)=> {
         setPageNumber(data.selected + 1);

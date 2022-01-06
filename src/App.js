@@ -16,7 +16,7 @@ const App = () => {
       <Nav />
 
       <Routes>
-        
+        <Route path="/rick-morty-wiki" element={<Character />} ></Route>
         <Route path="/" element={<Character />}></Route>
 
         <Route path="/:id" element={<CardDetail />}></Route>
