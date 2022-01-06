@@ -4,18 +4,18 @@ import InputGroup from "../Filter/Categories/InputGroup";
 
 const Location = () => {
   // Data fetch from api has the infomation needed
-  const [fetchData, setFetchData] = useState();
+  const [fetchData, setFetchData] = useState([]);
 
   // RESULTS OF THE FETCH
-  const [results, setResults] = useState();
+  const [results, setResults] = useState([]);
 
   // ID FROM THE FETCH
   const [id, setId] = useState(1)
-  console.log(results);
 
   // API LINK
   const api = `https://rickandmortyapi.com/api/location/${id}`;
-  // Decomposition
+    
+  const {name, type} = fetchData;
 
   useEffect(() => {
     // Need to learn about this
@@ -35,8 +35,7 @@ const Location = () => {
     })();
   }, [api]);
 
-  const {name,type} = fetchData;
-
+  
   return (
     <>
       <div className="container">
@@ -52,7 +51,7 @@ const Location = () => {
           <div className="col-lg-3 col-12 mb-4">
             <h4 className="text-center">Pick Location</h4>
             <InputGroup setId={setId} total={126} ></InputGroup>
-          </div>
+          </div>    
 
           <div className="col-lg-8 col-12 ">
             <div className="row">

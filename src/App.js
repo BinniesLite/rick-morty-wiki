@@ -17,13 +17,16 @@ const App = () => {
 
       <Routes>
         
-      <Route path="/rick-morty-wiki" element={<Character />}></Route>
-      <Route path="/" element={<Character />}></Route>
-      <Route path="/:id" element={<CardDetail />}></Route>
-        <Route path="/episode" element={<Episode />}></Route>
-        <Route path="/episode/:id" element={<CardDetail />}></Route>
-        <Route path="/location" element={<Location />}></Route>
-        <Route path="/location/:id" element={<CardDetail />}></Route>
+        <Route path="/rick-morty-wiki" element={<Character />}></Route>
+        
+        <Route path="/rick-morty-wiki" element={<Character />}></Route>
+        <Route path="/:id" element={<CardDetail />}></Route>
+        
+        <Route path="/rick-morty-wiki/episode" element={<Episode />}></Route>
+        <Route path="/rick-morty-wiki/episode/:id" element={<CardDetail />}></Route>
+
+        <Route path="/rick-morty-wiki/location" element={<Location />}></Route>
+        <Route path="/rick-morty-wiki/location/:id" element={<CardDetail />}></Route>
       </Routes>
     </Router>
   );

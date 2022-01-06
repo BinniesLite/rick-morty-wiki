@@ -6,16 +6,13 @@ const Episode = () => {
   // FETCH DATA
   const [fetchData, setFetchData] = useState([]);
   const [results, setResults] = useState([]); 
-
   // ID
   const [id, setId] = useState(1);
-  
-  console.log(id);
+
   // API LINK
   const api = `https://rickandmortyapi.com/api/episode/${id}`;
   // Decomposition
-  const { air_date, name } = fetchData;
-
+  console.log(fetchData);
 
   useEffect(() => {
     // Need to learn about this
@@ -35,7 +32,8 @@ const Episode = () => {
     })();
   }, [api]);
 
-
+  const { air_date, name } = fetchData;
+  
 
   return (
     <>
