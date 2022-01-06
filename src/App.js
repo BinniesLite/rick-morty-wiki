@@ -18,8 +18,7 @@ const App = () => {
       <Routes>
         
         <Route path="/" element={<Character />}></Route>
-        
-        <Route path="/rick-morty-wiki" element={<Character />}></Route>
+
         <Route path="/:id" element={<CardDetail />}></Route>
         
         <Route path="/episode" element={<Episode />}></Route>
