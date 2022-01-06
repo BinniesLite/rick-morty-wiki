@@ -44,7 +44,7 @@ const Character = () => {
             <Filter></Filter>
      
           <div className="col-lg-8 col-12">
-              <Card page="/" results={results} />
+              <Card page="/rick-morty-wiki/" results={results} />
           </div>
         </div>
       </div> 
